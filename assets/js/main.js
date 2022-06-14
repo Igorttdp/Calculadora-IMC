@@ -1,5 +1,3 @@
-
-
 function funcaoGeral() {
     const form = document.querySelector('.form');
     const resultado = document.querySelector('.resultadoIMC');
@@ -7,8 +5,8 @@ function funcaoGeral() {
 
     function recebeEventoForm(evento) {
         evento.preventDefault();
-        const peso = parseFloat(document.body.querySelector("#peso").value); //.value POIS TEM QUE PEGAR O VALOR, NÃO A SELEÇÃO
-        const altura = parseFloat(document.body.querySelector("#altura").value); //.value POIS TEM QUE PEGAR O VALOR, NÃO A SELEÇÃO
+        const peso = parseFloat(document.body.querySelector("#peso").value);
+        const altura = parseFloat(document.body.querySelector("#altura").value); 
 
 
         if (Number.isNaN(peso) === true || Number.isNaN(altura) === true) {
@@ -59,13 +57,12 @@ function funcaoGeral() {
         resultado.style.display = 'flex'
     }
 
-    form.addEventListener('submit', recebeEventoForm); //EventListener pega qualquer evento do ALVO. Nesse caso, o FORM
+    form.addEventListener('submit', recebeEventoForm); 
 }
 
-funcaoGeral() // CHAMAR A %#¨#@ DA FUNÇÃO PARA DAR PREVENT DEFAULT SENÃO NÃO FUNCIONA SEU CORNO
+funcaoGeral() 
 
 function fechar() {
     const resultado = document.querySelector('.resultadoIMC');
     resultado.style.display = 'none'
 }
-
